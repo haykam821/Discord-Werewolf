@@ -838,7 +838,6 @@ async def cmd_refresh(message, parameters):
 
     global lang
     lang = get_jsonparsed_data(url)
-    print (lang)
 
     await reply(message, 'The messages with language code `' + codeset + '` have been refreshed from GitHub.')
 
