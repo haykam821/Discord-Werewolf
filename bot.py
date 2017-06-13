@@ -897,6 +897,7 @@ async def cmd_lynch(message, parameters):
                 await reply(message, "Player **" + get_name(to_lynch) + "** is dead!")
             else:
                 session[1][message.author.id][2] = to_lynch
+                session[8] = message.author.id
                 await reply(message, "You have voted to lynch **" + get_name(to_lynch) + "**.")
                 await log(1, "{0} ({1}) LYNCH {2} ({3})".format(get_name(message.author.id), message.author.id, get_name(to_lynch), to_lynch))
         else:
@@ -2863,6 +2864,8 @@ async def game_loop(ses=None):
                     lynched_msg += 'they discover that {0} has escaped! The left-behind totem seems to have taken on the shape of a **{1}**.'
                     lynched_msg = lynched_msg.format(get_name(lynched_player), get_role(lynched_player, 'role'))
                     await client.send_message(client.get_channel(GAME_CHANNEL), lynched_msg)
+                else if 'desperation_totem' in session[1][lynched_player][4]:
+                    lynched_msg += random.choice(lang['desperation_death']).format(get_name(lynched_player), get_name(session[8]), get_role(session[8]))
                 else:
                     lynched_msg += random.choice(lang['lynched']).format(get_name(lynched_player), get_role(lynched_player, 'death'))
                     await client.send_message(client.get_channel(GAME_CHANNEL), lynched_msg)
