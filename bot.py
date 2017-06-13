@@ -15,7 +15,7 @@ import urllib.request
 ################## START INIT #####################
 client = discord.Client()
 # [playing?, {players dict}, day?, [night start, day start], [night elapsed, day elapsed], first join, gamemode, {original roles amount}]
-session = [False, {}, False, [0, 0], [timedelta(0), timedelta(0)], 0, '', {}]
+session = [False, {}, False, [0, 0], [timedelta(0), timedelta(0)], 0, '', {}, '']
 PLAYERS_ROLE = None
 ADMINS_ROLE = None
 WEREWOLF_NOTIFY_ROLE = None
@@ -452,6 +452,7 @@ async def cmd_fstop(message, parameters):
         session[4] = [timedelta(0), timedelta(0)]
         session[6] = ''
         session[7] = {}
+        session[8] = ''
         await client.send_message(client.get_channel(GAME_CHANNEL), msg)
         return
     else:
@@ -2006,6 +2007,7 @@ async def end_game(reason, winners=None):
     session[4] = [timedelta(0), timedelta(0)]
     session[6] = ''
     session[7] = {}
+    session[8] = ''
 
     perms = client.get_channel(GAME_CHANNEL).overwrites_for(client.get_server(WEREWOLF_SERVER).default_role)
     perms.send_messages = True
@@ -2859,13 +2861,17 @@ async def game_loop(ses=None):
                 for player in [x for x in totem_dict if session[1][x][0] and totem_dict[x] > 0 and x != lynched_player]:
                     lynched_msg += "**{}** impatiently votes to lynch **{}**.\n".format(get_name(player), get_name(lynched_player))
                 lynched_msg += '\n'
+                if 'desperation_totem' in session[1][lynched_player][4]:
+                    lynched_msg += random.choice(lang['desperation_death']).format(get_name(lynched_player), get_name(session[8]), get_role(session[8], 'death')) + '\n'
+                    session[1][session[8]][0] = False
+                    member = client.get_server(WEREWOLF_SERVER).get_member(session[8])
+                    if member:
+                        await client.remove_roles(member, PLAYERS_ROLE)
                 if 'revealing_totem' in session[1][lynched_player][4]:
                     lynched_msg += 'As the villagers prepare to lynch **{0}**, their totem emits a brilliant flash of light! When the villagers are able to see again, '
                     lynched_msg += 'they discover that {0} has escaped! The left-behind totem seems to have taken on the shape of a **{1}**.'
                     lynched_msg = lynched_msg.format(get_name(lynched_player), get_role(lynched_player, 'role'))
                     await client.send_message(client.get_channel(GAME_CHANNEL), lynched_msg)
-                elif 'desperation_totem' in session[1][lynched_player][4]:
-                    lynched_msg += random.choice(lang['desperation_death']).format(get_name(lynched_player), get_name(session[8]), get_role(session[8]))
                 else:
                     lynched_msg += random.choice(lang['lynched']).format(get_name(lynched_player), get_role(lynched_player, 'death'))
                     await client.send_message(client.get_channel(GAME_CHANNEL), lynched_msg)
@@ -2965,6 +2971,7 @@ async def game_start_timeout_loop():
         session[4] = [timedelta(0), timedelta(0)]
         session[6] = ''
         session[7] = {}
+        session[8] = ''
 
 async def backup_settings_loop():
     while not client.is_closed:
@@ -3314,7 +3321,7 @@ totems = {'death_totem' : 'The player who is given this totem will die tonight.'
                            'all of their visions will return the opposite.',
           'desperation_totem' : 'If the person with the desperation totem is lynched during the day, the last person to vote them will also die.'
          }
-SHAMAN_TOTEMS = ['death_totem', 'protection_totem', 'revealing_totem', 'influence_totem', 'impatience_totem', 'pacifism_totem', 'desparation_totem']
+SHAMAN_TOTEMS = ['desperation_totem']#'death_totem', 'protection_totem', 'revealing_totem', 'influence_totem', 'impatience_totem', 'pacifism_totem', 
 ROLES_SEEN_VILLAGER = ['werekitten', 'traitor', 'sorcerer', 'cultist', 'villager', 'fool']
 ROLES_SEEN_WOLF = ['wolf', 'werecrow', 'cursed']
 ACTUAL_WOLVES = ['wolf', 'werecrow', 'werekitten']
