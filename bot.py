@@ -3308,8 +3308,10 @@ totems = {'death_totem' : 'The player who is given this totem will die tonight.'
           'blinding_totem' : 'The player who is given this totem will be injured and unable to vote the following day.',
           'deceit_totem' : 'If the player who is given this totem is seen by the seer/oracle the following night, the '
                            'vision will return the opposite of what they are. If a seer/oracle is given this totem, '
-                           'all of their visions will return the opposite.'}
-SHAMAN_TOTEMS = ['death_totem', 'protection_totem', 'revealing_totem', 'influence_totem', 'impatience_totem', 'pacifism_totem']
+                           'all of their visions will return the opposite.',
+          'desparation_totem' : 'If the person with the desperation totem is lynched during the day, the last person to vote them will also die.'
+         }
+SHAMAN_TOTEMS = ['death_totem', 'protection_totem', 'revealing_totem', 'influence_totem', 'impatience_totem', 'pacifism_totem', 'desparation_totem']
 ROLES_SEEN_VILLAGER = ['werekitten', 'traitor', 'sorcerer', 'cultist', 'villager', 'fool']
 ROLES_SEEN_WOLF = ['wolf', 'werecrow', 'cursed']
 ACTUAL_WOLVES = ['wolf', 'werecrow', 'werekitten']
