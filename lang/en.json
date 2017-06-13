@@ -88,5 +88,8 @@
 	],
 	"firstjoin": [
 		"**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
+	],
+	"desperation_death": [
+		"As the noose is being fitted, **{0}**'s totem emits a brilliant flash of light. When the villagers are able to see again, they discover that **{1}**, a **{2}**, has fallen over dead."
 	]
 }
