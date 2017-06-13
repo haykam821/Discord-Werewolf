@@ -12,6 +12,8 @@ You must first create a new bot account at https://discordapp.com/developers/app
 
 ## Changelog
 
+6/13/2017 - Added the last voter-killing desperation totem (and `session[8]`/last voter ID value)
+
 6/3/2017 - Fixed a bug that made lycan activate on the night it was given rather than the night after; Fixed a bug where an injured player could still use the abstain command
 
 5/30/2017 - Fixed a bug where shooting werekitten would be counted as shooting a wolf; Optimized the code for that
