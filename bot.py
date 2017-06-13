@@ -2864,7 +2864,7 @@ async def game_loop(ses=None):
                     lynched_msg += 'they discover that {0} has escaped! The left-behind totem seems to have taken on the shape of a **{1}**.'
                     lynched_msg = lynched_msg.format(get_name(lynched_player), get_role(lynched_player, 'role'))
                     await client.send_message(client.get_channel(GAME_CHANNEL), lynched_msg)
-                else if 'desperation_totem' in session[1][lynched_player][4]:
+                elif 'desperation_totem' in session[1][lynched_player][4]:
                     lynched_msg += random.choice(lang['desperation_death']).format(get_name(lynched_player), get_name(session[8]), get_role(session[8]))
                 else:
                     lynched_msg += random.choice(lang['lynched']).format(get_name(lynched_player), get_role(lynched_player, 'death'))
