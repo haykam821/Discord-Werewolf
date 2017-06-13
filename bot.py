@@ -1113,7 +1113,7 @@ async def cmd_time(message, parameters):
 
 @cmd('give', [2, 0], "```\n{0}give <player>\n\nIf you are a shaman, gives your totem to <player>. You can see your totem by using `myrole` in pm.```")
 async def cmd_give(message, parameters):
-    if not session[0] or message.author.id not in session[1] or session[1][message.author.id][1] not in ['shaman', 'crazed shaman'] or not session[1][message.author.id][0]:
+    if not session[0] or message.author.id not in session[1] or session[1][message.author.id][1] not in ['shaman', 'crazed shaman', 'wolf shaman'] or not session[1][message.author.id][0]:
         return
     if session[2]:
         await reply(message, "You may only give totems during the night.")
@@ -2974,8 +2974,8 @@ async def backup_settings_loop():
 
 ############## POST-DECLARATION STUFF ###############
 COMMANDS_FOR_ROLE = {'see' : ['seer'],
-                     'kill' : ['wolf', 'werecrow', 'werekitten', 'hunter'],
-                     'give' : ['shaman'],
+                     'kill' : ['wolf', 'werecrow', 'werekitten', 'hunter', 'wolf shaman'],
+                     'give' : ['shaman', 'crazed shaman', 'wolf shaman'],
                      'visit' : ['harlot'],
                      'shoot' : ['gunner'],
                      'observe' : ['werecrow', 'sorcerer'],
