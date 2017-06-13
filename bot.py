@@ -3014,7 +3014,11 @@ roles = {'wolf' : ['wolf', 'wolves', "Your job is to kill all of the villagers. 
          'cursed villager' : ['template', 'cursed villagers', "This template is hidden and is seen as a wolf by the seer. Roles normally seen as wolf, the seer, and the fool cannot be cursed."],
          'gunner' : ['template', 'gunners', "This template gives the player a gun. Type `{0}shoot <player>` in channel during the day to shoot <player>. "
                                             "If you are a villager and shoot a wolf, they will die. Otherwise, there is a chance of killing them, injuring "
-                                            "them, or the gun exploding. If you are a wolf and shoot at a wolf, you will intentionally miss."]}
+                                            "them, or the gun exploding. If you are a wolf and shoot at a wolf, you will intentionally miss."],
+          'wolf shaman' : ['wolf', 'wolf shamans', "You select a player to receive a totem each night by using `give <player>`. You may give a totem to yourself, "
+                                                   "but you may not give the same person a totem two nights in a row. If you do not give the totem to anyone, "
+                                                   "it will be given to a random player. You may also use `kill <player>` to kill someone in the same night."
+]}
 
 gamemodes = {
     'default' : {
