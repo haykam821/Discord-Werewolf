@@ -3321,7 +3321,7 @@ totems = {'death_totem' : 'The player who is given this totem will die tonight.'
                            'all of their visions will return the opposite.',
           'desperation_totem' : 'If the person with the desperation totem is lynched during the day, the last person to vote them will also die.'
          }
-SHAMAN_TOTEMS = ['desperation_totem']#'death_totem', 'protection_totem', 'revealing_totem', 'influence_totem', 'impatience_totem', 'pacifism_totem', 
+SHAMAN_TOTEMS = ['death_totem', 'protection_totem', 'revealing_totem', 'influence_totem', 'impatience_totem', 'pacifism_totem', 'desperation_totem']
 ROLES_SEEN_VILLAGER = ['werekitten', 'traitor', 'sorcerer', 'cultist', 'villager', 'fool']
 ROLES_SEEN_WOLF = ['wolf', 'werecrow', 'cursed']
 ACTUAL_WOLVES = ['wolf', 'werecrow', 'werekitten']
