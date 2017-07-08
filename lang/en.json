@@ -66,7 +66,19 @@
 		"The villagers force **{0}** to play Russian Roulette. The town square is stained with the remains of the **{1}**.",
 		"The villagers, after much debate, finally decide on lynching **{0}**, who turned out to be... a **{1}**.",
 		"After a prolonged struggle, **{0}** is forced to the gallows, and is discovered after death to be a **{1}**.",
-		"The villagers choose to hang **{0}**; however, the rope stretches and breaks, and the ensuing fall kills the **{1}**."
+		"The villagers choose to hang **{0}**; however, the rope stretches and breaks, and the ensuing fall kills the **{1}**.",
+        	"The villagers, heavy with the pain of death, reluctantly lynch **{0}**, a **{1}**.",
+        	"Compliant with the will of the village, the gallows prove effective in killing **{0}**, a **{1}**.",
+        	"Galvanized by fear, the mob puts **{0}** to death. After inspection, they find that they have killed a **{1}**.",
+        	"In a fit of hysteria, the villagers lynch **{0}**, killing a **{1}**.",
+        	"Believing their fellow neighbor and friend to be dangerous, the mob puts **{0}**, a **{1}**, to death.",
+        	"Under a lot of noise, the pitchfork-bearing villagers lynch **{0}**, who turned out to be... a **{1}**.",
+        	"Despite protests, the mob drags their victim to the hanging tree. **{0}** succumbs to the will of the horde, and is hanged. The villagers have killed a **{1}**.",
+        	"Resigned to the inevitable, **{0}** is led to the gallows. Once the twitching stops, it is discovered that the village lynched a **{1}**.",
+        	"Before the rope is pulled, **{0}**, a **{1}**, pulls the pin on a grenade. They hesitate, and it explodes, killing them.",
+        	"Before the rope is pulled, **{0}**, a **{1}**, throws a grenade at the mob. The grenade explodes early.",
+        	"Uttering a chilling war cry, the villagers drag **{0}** to the edge of a cliff and throw them off. The cliff face is now covered with the leftover remains of the late **{1}**.",
+        	"The angry villagers grab **{0}** by the legs and arms, and throw them into a large fire. It seems that a **{1}**'s body doesn't burn that well, after all."
 	],
 	"hastotem": [
 		"**{0}** is in possession of a mysterious totem..."
