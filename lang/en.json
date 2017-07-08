@@ -88,5 +88,8 @@
 	],
 	"firstjoin": [
 		"**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
+	],
+	"cub_grow_up": [
+		"You have grown up into a wolf and vowed to take revenge for your dead parents!"
 	]
 }
