@@ -1057,7 +1057,13 @@ async def cmd_coin(message, parameters):
         reply_msg = 'heads'
     else:
         reply_msg = 'tails'
+    
+    msg = ''
+    msg += random.choice(lang['coin_toss']).format(client.user.name)
+    msg += random.choice(lang['coin_land']).format(reply_msg)
+        
     await reply(message, 'The coin landed on **' + reply_msg + '**!')
+    await client.send_message(client.get_channel(GAME_CHANNEL), msg)
 
 @cmd('admins', [0, 0], "```\n{0}admins takes no arguments\n\nLists online/idle admins if used in pm, and **alerts** online/idle admins if used in channel (**USE ONLY WHEN NEEDED**).```")
 async def cmd_admins(message, parameters):
