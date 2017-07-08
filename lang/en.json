@@ -50,7 +50,11 @@
 		"Some house doors have been opened.",
 	        "A scent much like that of a wolf permeates the air.",
 	        "Half-buried wolf droppings are found.",
-	        "Traces of wolf fur are found."
+	        "Traces of wolf fur are found.",
+		"The body of a young penguin pet is found.",
+        	"Paw prints are found circling around the village.",
+        	"A pool of blood and wolf paw prints are found.",
+       		"The body of a slain cat is found.",
 	],
 	"lynched": [
 		"The villagers have agreed to lynch **{0}**, a **{1}**.",
