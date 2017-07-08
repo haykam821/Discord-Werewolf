@@ -2455,7 +2455,7 @@ async def check_traitor():
                 member = client.get_server(WEREWOLF_SERVER).get_member(cub)
                 if member:
                     try:
-                        await client.send_message(member, "You have grown up into a wolf and vowed to take revenge for your dead parents!")
+                        await client.send_message(member, random.choice(lang['cub_grow_up']))
                     except discord.Forbidden:
                         pass
     if len(wolf_team_no_traitors) == 0:
