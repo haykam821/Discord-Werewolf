@@ -84,7 +84,20 @@
 		"Standing under a tree, **{0}**, a **{1}**, is killed by a falling branch.",
 		"**{0}**, a **{1}**, is killed by lightning before the villagers' eyes. The air smells of burnt flesh.",
         	"Rampaging through the village, a bull gores **{0}**, a **{1}**.",
-	        "**{0}**, a **{1}**, falls into a vat of molasses and drowns."
+	        "**{0}**, a **{1}**, falls into a vat of molasses and drowns.",
+        	"**{0}**, a **{1}**, suddenly falls over dead before the astonished villagers.",
+        	"While wearing a fake pair of antlers, **{0}**, a **{1}**, is shot dead by a hunter.",
+        	"Standing under a tree, **{0}**, a **{1}**, is killed by a falling branch.",
+        	"Rampaging through the village, a bull gores **{0}**, a **{1}**.",
+        	"**{0}**, a **{1}**, falls into a vat of molasses and drowns.",
+        	"A pack of wild animals sets upon **{0}**. Soon the **{1}** is only a pile of bones and a lump in the beasts' stomachs.",
+        	"**{0}**, a **{1}**, fell off the roof of their house and is now dead.",
+        	"**{0}** is crushed to death by a falling tree. The villagers desperately try to save the **{1}**, but it is too late.",
+        	"**{0}** suddenly bursts into flames and is now all but a memory. The survivors bury the **{1}**'s ashes.",
+        	"**{0}** played Russian roulette and lost. The villagers bury the **{1}**'s remains.",
+        	"**{0}**, a **{1}**, poked a bear in the eye with a stick and has paid the price.",
+        	"**{0}** tried to smoke dynamite. The resulting explosion has left a crater in place of the **{1}**.",
+        	"**{0}**, a **{1}**, went spelunking and never made it back."
 	],
 	"firstjoin": [
 		"**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
