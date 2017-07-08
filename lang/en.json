@@ -122,9 +122,9 @@
 		"You have grown up into a wolf and vowed to take revenge for your dead parents!"
 	],
     	"coin_toss": [
-		"\u0002{0}\u0002 tosses a coin into the air..."
+		"**{0}** tosses a coin into the air..."
 	],
     	"coin_land": [
-		"The coin lands on \u0002{0}\u0002."
+		"The coin lands on **{0}**."
 	]
 }
