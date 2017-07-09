@@ -2479,10 +2479,10 @@ async def check_traitor():
             member = client.get_server(WEREWOLF_SERVER).get_member(traitor)
             if member:
                 try:
-                    await client.send_message(member, "HOOOOOOOOOWL. You have become... a wolf!\nIt is up to you to avenge your fallen leaders!")
+                    await client.send_message(member, random.choice(lang['traitor_turn']))
                 except discord.Forbidden:
                     pass
-        await client.send_message(client.get_channel(GAME_CHANNEL), "**The villagers, during their celebrations, are frightened as they hear a loud howl. The wolves are not gone!**")
+        await client.send_message(client.get_channel(GAME_CHANNEL), random.choice(lang['traitor_turn_channel']))
 
 def sort_roles(role_list):
     role_list = list(role_list)
