@@ -1365,7 +1365,7 @@ async def cmd_visit(message, parameters):
                     session[1][message.author.id][2] = player
                     member = client.get_server(WEREWOLF_SERVER).get_member(player)
                     try:
-                        await client.send_message(member, "You are spending the night with **{}**. Have a good time!".format(get_name(message.author.id)))
+                        await client.send_message(member, random.choice(lang['harlot_success']).format(get_name(message.author.id)))
                     except:
                         pass
                     await log(1, "{0} ({1}) VISIT {2} ({3})".format(get_name(message.author.id), message.author.id, get_name(player), player))
