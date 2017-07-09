@@ -135,5 +135,6 @@
   ],
   "generic_success":[
     ":thumbsup:"
-  ]
+  ],
+  "error_log": "An error has occurred and has been logged.",
 }
