@@ -1872,8 +1872,8 @@ def has_privileges(level, message):
     else:
         return False
 
-async def reply(message, text):
-    await client.send_message(message.channel, message.author.mention + ', ' + str(text))
+async def reply(message, text, embed):
+    await client.send_message(message.channel, message.author.mention + ', ' + str(text), embed=embed)
 
 async def parse_command(commandname, message, parameters):
     await log(0, 'Parsing command ' + commandname + ' with parameters `' + parameters + '` from ' + message.author.name + ' (' + message.author.id + ')')
