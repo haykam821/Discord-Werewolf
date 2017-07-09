@@ -1355,7 +1355,7 @@ async def cmd_visit(message, parameters):
             player = get_player(parameters)
             if player:
                 if player == message.author.id:
-                    await reply(message, "You have chosen to stay home tonight.")
+                    await reply(message, random.choice(lang['harlot_no_visit']))
                     session[1][message.author.id][2] = message.author.id
                     await log(1, "{0} ({1}) STAY HOME".format(get_name(message.author.id), message.author.id))
                 elif player in [x for x in session[1] if not session[1][x][0]]:
