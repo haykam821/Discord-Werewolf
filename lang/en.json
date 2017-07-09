@@ -89,6 +89,12 @@
   "hastotems":[
     "**{0}**, and **{1}** are in possession of a mysterious totem..."
   ],
+	"death_totem": "The player who is given this totem will die tonight.",
+	"protection_totem": "The player who is given this totem is protected from dying tonight.",
+	"revealing_totem": "If the player who is given this totem is lynched, their role is revealed to everyone instead of them dying.",
+	"impatience_totem": "The player who is given this totem is counted as voting for everyone except themselves, even if they do not !vote.",
+	"pacifism_totem": "Votes by the player who is given this totem do not count. Furthermore, they are always counted as abstaining, even if they do not !abstain.",
+	"influence_totem": "Votes by the player who is given this totem count twice.",
   "leavedeath":[
     "**{0}** spontaneously combusted. The air smells of freshly burnt **{1}**.",
     "While wearing a red triangular hat, **{0}**, a **{1}**, was shot dead by a hunter.",
