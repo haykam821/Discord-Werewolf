@@ -142,5 +142,8 @@
   "generic_success":[
     ":thumbsup:"
   ],
+  "generic_error":[
+    ":thumbsdown:"
+  ],
   "error_log": "An error has occurred and has been logged."
 }
