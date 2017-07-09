@@ -126,5 +126,11 @@
 	],
     	"coin_land": [
 		"The coin lands on **{0}**."
+	],
+   	"traitor_turn": [
+		"HOOOOOOOOOWL. You have become... a wolf!\nIt is up to you to avenge your fallen leaders!"
+	],
+    	"traitor_turn_channel": [
+		"\u0002The villagers, during their celebrations, are frightened as they hear a loud howl. The wolves are not gone!\u0002"
 	]
 }
