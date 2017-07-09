@@ -2630,10 +2630,10 @@ async def game_loop(ses=None):
                         try:
                             random_given = "wtf? this is a bug; pls report to admins"
                             if role == 'shaman':
-                                random_given = "Because you forgot to give your totem out at night, your **{0}** was randomly given to **{1}**.".format(
+                                random_given = random.choice(lang['random_totem_target']).format(
                                     totem.replace('_', ' '), get_name(totem_target))
                             elif role == 'crazed shaman':
-                                random_given = "Because you forgot to give your totem out at night, your totem was randomly given to **{0}**.".format(get_name(totem_target))
+                                random_given = random.choice(lang['random_crazed_totem_target']).format(get_name(totem_target))
                             await client.send_message(member, random_given)
                         except discord.Forbidden:
                             pass
