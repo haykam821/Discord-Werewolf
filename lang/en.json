@@ -167,5 +167,8 @@
   "harlot_success": [
     "You are spending the night with **{0}**. Have a good time!"
   ],
+  "harlot_no_visit": [  
+    "You have chosen to stay home for the night."
+  ],
   "error_log":"An error has occurred and has been logged."
 }
