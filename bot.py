@@ -186,7 +186,7 @@ async def cmd_exec(message, parameters):
         sys.stdout = old_stdout
     output = str(redirected_output.getvalue())
     if output == '':
-        output = ":thumbsup:"
+        output = random.choice(lang['generic_success'])
     await client.send_message(message.channel, output)
 
 @cmd('async', [2, 2], "```\n{0}async <code>\n\nExecutes <code> as a coroutine.```")
@@ -495,26 +495,26 @@ async def cmd_op(message, parameters):
     await log(2, "{0} ({1}) OP {2}".format(message.author.name, message.author.id, parameters))
     if parameters == "":
         await client.add_roles(client.get_server(WEREWOLF_SERVER).get_member(message.author.id), ADMINS_ROLE)
-        await reply(message, ":thumbsup:")
+        await reply(message, random.choice(lang['generic_success']))
     else:
         member = client.get_server(WEREWOLF_SERVER).get_member(parameters.strip("<!@>"))
         if member:
             if member.id in ADMINS:
                 await client.add_roles(member, ADMINS_ROLE)
-                await reply(message, ":thumbsup:")
+                await reply(message, random.choice(lang['generic_success']))
 
 @cmd('deop', [1, 1], "```\n{0}deop takes no arguments\n\nDeops yourself so you can play with the players ;)```")
 async def cmd_deop(message, parameters):
     await log(2, "{0} ({1}) DEOP {2}".format(message.author.name, message.author.id, parameters))
     if parameters == "":
         await client.remove_roles(client.get_server(WEREWOLF_SERVER).get_member(message.author.id), ADMINS_ROLE)
-        await reply(message, ":thumbsup:")
+        await reply(message, random.choice(lang['generic_success']))
     else:
         member = client.get_server(WEREWOLF_SERVER).get_member(parameters.strip("<!@>"))
         if member:
             if member.id in ADMINS:
                 await client.remove_roles(member, ADMINS_ROLE)
-                await reply(message, ":thumbsup:")
+                await reply(message, random.choice(lang['generic_success']))
 
 @cmd('role', [0, 0], "```\n{0}role [<role | number of players | gamemode>] [<number of players>]\n\nIf a <role> is given, "
                      "displays a description of <role>. If a <number of players> is given, displays the quantity of each "
@@ -1062,7 +1062,7 @@ async def cmd_coin(message, parameters):
     msg += random.choice(lang['coin_toss']).format(message.author.name)
     msg += '\n'
     msg += random.choice(lang['coin_land']).format(reply_msg)
-    
+
     await client.send_message(client.get_channel(GAME_CHANNEL), msg)
 
 @cmd('admins', [0, 0], "```\n{0}admins takes no arguments\n\nLists online/idle admins if used in pm, and **alerts** online/idle admins if used in channel (**USE ONLY WHEN NEEDED**).```")
@@ -1073,15 +1073,21 @@ async def cmd_admins(message, parameters):
 async def cmd_fday(message, parameters):
     if session[0] and not session[2]:
         session[2] = True
-        await reply(message, ":thumbsup:")
+        await reply(message, random.choice(lang['generic_success']))
         await log(2, "{0} ({1}) FDAY".format(message.author.name, message.author.id))
+    else:
+        await reply(message, random.choice(lang['generic_error']))
+        await log(2, "{0} ({1}) FDAY (already day!)".format(message.author.name, message.author.id))
 
 @cmd('fnight', [1, 2], "```\n{0}fnight takes no arguments\n\nForces day to end.```")
 async def cmd_fnight(message, parameters):
     if session[0] and session[2]:
         session[2] = False
-        await reply(message, ":thumbsup:")
+        await reply(message, random.choice(lang['generic_success']))
         await log(2, "{0} ({1}) FNIGHT".format(message.author.name, message.author.id))
+    else:
+        await reply(message, random.choice(lang['generic_error']))
+        await log(2, "{0} ({1}) FNIGHT (already night!)".format(message.author.name, message.author.id))
 
 @cmd('frole', [1, 2], "```\n{0}frole <player> <role>\n\nSets <player>'s role to <role>.```")
 async def cmd_frole(message, parameters):
@@ -1829,7 +1835,7 @@ async def cmd_frevive(message, parameters):
                 await reply(message, "Player **{}** is already alive!".format(player))
             else:
                 session[1][player][0] = True
-                await reply(message, ":thumbsup:")
+                await reply(message, random.choice(lang['generic_success']))
         else:
             await reply(message, "Could not find player {}".format(parameters))
     await log(2, "{} ({}) FREVIVE {}".format(message.author.name, message.author.id, parameters))
