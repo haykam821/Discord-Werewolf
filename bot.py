@@ -541,7 +541,10 @@ async def cmd_role(message, parameters):
         return
     elif _autocomplete(parameters, roles)[1] == 1:
         role = _autocomplete(parameters, roles)[0]
-        await reply(message, "```\nRole name: {}\nTeam: {}\nDescription: {}\n```".format(role, roles[role][0], roles[role][2]))
+
+        em = discord.Embed(title=role.title(), description="**Team:** " + roles[role][0].title() + "\n\n" + roles[role][2])
+
+        await reply(message, "", em)
         return
     params = parameters.split(' ')
     gamemode = 'default'
