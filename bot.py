@@ -1347,7 +1347,7 @@ async def cmd_visit(message, parameters):
         await reply(message, "You may only visit during the night.")
         return
     if session[1][message.author.id][2]:
-        await reply(message, "You are already spending the night with **{}**.".format(get_name(session[1][message.author.id][2])))
+        await reply(message, random.choice(lang['harlot_already_visited']).format(get_name(session[1][message.author.id][2])))
     else:
         if parameters == "":
             await reply(message, roles[session[1][message.author.id][1]][2])
@@ -1361,7 +1361,7 @@ async def cmd_visit(message, parameters):
                 elif player in [x for x in session[1] if not session[1][x][0]]:
                     await reply(message, "Player **" + get_name(player) + "** is dead!")
                 else:
-                    await reply(message, "You are spending the night with **{}**. Have a good time!".format(get_name(player)))
+                    await reply(message, random.choice(lang['harlot_success']).format(get_name(player)))
                     session[1][message.author.id][2] = player
                     member = client.get_server(WEREWOLF_SERVER).get_member(player)
                     try:
