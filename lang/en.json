@@ -1,136 +1,136 @@
 {
-	"ping": [
-		"Pong!",
-		"**PONG! {bot_nick}** smashes the ball into **{author}'s** face!",
-		"Ping!",
-		"Pling!",
-		"Dink! The ball knocks over **{bot_nick}**'s glass of lemonade.",
-		"\\*ping\\*. **{bot_nick}** taps the ball, which brushes the net and falls onto **{author}'s** side.",
-		"Pling! The ball hits **{author}'s** chest and they dramatically fall over.",
-		"Pong! The ball is launched at the wall, going nowhere near the table.",
-		"An error has pinged and has been ponged.",
-		"PING! **{author}**",
-		"Don't you mean **{p}ping**?",
-		"{bot_nick}.exe has stopped responding. Windows is checking for a solution to the problem..."
-	],
-	"maxplayers": [
-		"The maximum number of players ({0}) have already joined the game.",
-		"There's no room left for you to join this game. There are already {0} players in this lobby."
-	],
-	"minplayers": [
-		"Please wait until there are at least {0} players.",
-		"You cannot start the game until there are at least {0} players."
-	],
-	"notplayingstart": [
-		"You are not playing, so you cannot start the game! Type `!join` to join the game."
-	],
-	"notplayingleave": [
-		"You cannot leave a game you are not playing!"
-	],
-	"alreadyin": [
-		"You are already playing!",
-		"You are already in!"
-	],
-	"leavelobby": [
-		"**{0}** left the game. There are now **{1}** players in the lobby.",
-		"**{0}** walked out of the lobby. There are now **{1}** players in the lobby.",
-		"**{0}** was shot twice by a hunter, once in the head and once in the heart. Remaining players: **{1}**",
-		"**{0}** poked a bear in the eye with a stick and has paid the price. Remaining players: **{1}**",
-		"**{0}** was hit by a humongous yellow bullet from a giant yellow tank. The **{1}** remaining players cower in fear."
-	],
-	"gamestart": [
-		"**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game.",
-		"**{0}** has started a game of Werewolf. Type `{p}start` to start the game. Type `{p}join` to join."
-	],
-	"nokills": [
-		"The villagers discover the dead body of a beloved pet penguin, but lucklily no one was harmed.",
-		"The villagers discover the dead body of a beloved pet dog, but lucklily no one was harmed.",
-		"The villagers discover the dead body of a beloved pet cat, but lucklily no one was harmed.",
-		"Paw prints and tufts of fur are found circling the village, but everyone seems unharmed.",
-		"Some house doors have been opened.",
-		"A scent much like that of a wolf permeates the air.",
-		"Half-buried wolf droppings are found.",
-		"Traces of wolf fur are found.",
-		"The body of a young penguin pet is found.",
-		"Paw prints are found circling around the village.",
-		"A pool of blood and wolf paw prints are found.",
-		"The body of a slain cat is found."
-	],
-	"lynched": [
-		"The villagers have agreed to lynch **{0}**, a **{1}**.",
-		"The villagers perform surgery to obtain the heart of **{0}**, now known to be a **{1}**. They put it in a plastic cup.",
-		"The villagers perform surgery to obtain the brains of **{0}**, now known to be a **{1}**. They seal it in a glass jar.",
-		"Reluctantly, the villagers lead **{0}** to the gallows, who is later found to be a **{1}**.",
-		"The villagers sacrifice **{0}** to the belunga god, who is satisfied with the **{1}** for now.",
-		"For SCIENCE, the villagers throw **{0}** into a volcano. They discover that the melting point of a **{1}** is less than that of lava.",
-		"The villagers force **{0}** to play Russian Roulette. The town square is stained with the remains of the **{1}**.",
-		"The villagers, after much debate, finally decide on lynching **{0}**, who turned out to be... a **{1}**.",
-		"After a prolonged struggle, **{0}** is forced to the gallows, and is discovered after death to be a **{1}**.",
-		"The villagers choose to hang **{0}**; however, the rope stretches and breaks, and the ensuing fall kills the **{1}**.",
-		"The villagers, heavy with the pain of death, reluctantly lynch **{0}**, a **{1}**.",
-		"Compliant with the will of the village, the gallows prove effective in killing **{0}**, a **{1}**.",
-		"Galvanized by fear, the mob puts **{0}** to death. After inspection, they find that they have killed a **{1}**.",
-		"In a fit of hysteria, the villagers lynch **{0}**, killing a **{1}**.",
-		"Believing their fellow neighbor and friend to be dangerous, the mob puts **{0}**, a **{1}**, to death.",
-		"Under a lot of noise, the pitchfork-bearing villagers lynch **{0}**, who turned out to be... a **{1}**.",
-		"Despite protests, the mob drags their victim to the hanging tree. **{0}** succumbs to the will of the horde, and is hanged. The villagers have killed a **{1}**.",
-		"Resigned to the inevitable, **{0}** is led to the gallows. Once the twitching stops, it is discovered that the village lynched a **{1}**.",
-		"Before the rope is pulled, **{0}**, a **{1}**, pulls the pin on a grenade. They hesitate, and it explodes, killing them.",
-		"Before the rope is pulled, **{0}**, a **{1}**, throws a grenade at the mob. The grenade explodes early.",
-		"Uttering a chilling war cry, the villagers drag **{0}** to the edge of a cliff and throw them off. The cliff face is now covered with the leftover remains of the late **{1}**.",
-		"The angry villagers grab **{0}** by the legs and arms, and throw them into a large fire. It seems that a **{1}**'s body doesn't burn that well, after all."
-	],
-	"hastotem": [
-		"**{0}** is in possession of a mysterious totem..."
-	],
-	"hastotem2": [
-		"**{0}** and **{1}** are in possession of a mysterious totem..."
-	],
-	"hastotems": [
-		"**{0}**, and **{1}** are in possession of a mysterious totem..."
-	],
-	"leavedeath": [
-		"**{0}** spontaneously combusted. The air smells of freshly burnt **{1}**.",
-		"While wearing a red triangular hat, **{0}**, a **{1}**, was shot dead by a hunter.",
-		"While wearing a yellow square hat, **{0}**, a **{1}**, was rammed by a tank.",
-		"While wearing a blue pentagonal hat, **{0}**, a **{1}**, was destroyed by a giant cannonball.",
-		"While wearing an oversized blue pentagonal hat, **{0}**, a **{1}**, was annihilated by a humongous mortar shell.",
-		"After jumping into a tank, **{0}** drowned. The fish consumed the dead **{1}**'s body.",
-		"**{0}** mysteriously disappeared in the woods. Nobody knows where the **{1}** went.",
-		"Standing under a tree, **{0}**, a **{1}**, is killed by a falling branch.",
-		"**{0}**, a **{1}**, is killed by lightning before the villagers' eyes. The air smells of burnt flesh.",
-		"Rampaging through the village, a bull gores **{0}**, a **{1}**.",
-		"**{0}**, a **{1}**, falls into a vat of molasses and drowns.",
-		"**{0}**, a **{1}**, suddenly falls over dead before the astonished villagers.",
-		"While wearing a fake pair of antlers, **{0}**, a **{1}**, is shot dead by a hunter.",
-		"Standing under a tree, **{0}**, a **{1}**, is killed by a falling branch.",
-		"Rampaging through the village, a bull gores **{0}**, a **{1}**.",
-		"**{0}**, a **{1}**, falls into a vat of molasses and drowns.",
-		"A pack of wild animals sets upon **{0}**. Soon the **{1}** is only a pile of bones and a lump in the beasts' stomachs.",
-		"**{0}**, a **{1}**, fell off the roof of their house and is now dead.",
-		"**{0}** is crushed to death by a falling tree. The villagers desperately try to save the **{1}**, but it is too late.",
-		"**{0}** suddenly bursts into flames and is now all but a memory. The survivors bury the **{1}**'s ashes.",
-		"**{0}** played Russian roulette and lost. The villagers bury the **{1}**'s remains.",
-		"**{0}**, a **{1}**, poked a bear in the eye with a stick and has paid the price.",
-		"**{0}** tried to smoke dynamite. The resulting explosion has left a crater in place of the **{1}**.",
-		"**{0}**, a **{1}**, went spelunking and never made it back."
-	],
-	"firstjoin": [
-		"**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
-	],
-	"cub_grow_up": [
-		"You have grown up into a wolf and vowed to take revenge for your dead parents!"
-	],
-	"coin_toss": [
-		"**{0}** tosses a coin into the air..."
-	],
-	"coin_land": [
-		"The coin lands on **{0}**."
-	],
-	"traitor_turn": [
-		"HOOOOOOOOOWL. You have become... a wolf!\nIt is up to you to avenge your fallen leaders!"
-	],
-	"traitor_turn_channel": [
-		"\u0002The villagers, during their celebrations, are frightened as they hear a loud howl. The wolves are not gone!\u0002"
-	]
+  "ping":[
+    "Pong!",
+    "**PONG! {bot_nick}** smashes the ball into **{author}'s** face!",
+    "Ping!",
+    "Pling!",
+    "Dink! The ball knocks over **{bot_nick}**'s glass of lemonade.",
+    "\\*ping\\*. **{bot_nick}** taps the ball, which brushes the net and falls onto **{author}'s** side.",
+    "Pling! The ball hits **{author}'s** chest and they dramatically fall over.",
+    "Pong! The ball is launched at the wall, going nowhere near the table.",
+    "An error has pinged and has been ponged.",
+    "PING! **{author}**",
+    "Don't you mean **{p}ping**?",
+    "{bot_nick}.exe has stopped responding. Windows is checking for a solution to the problem..."
+  ],
+  "maxplayers":[
+    "The maximum number of players ({0}) have already joined the game.",
+    "There's no room left for you to join this game. There are already {0} players in this lobby."
+  ],
+  "minplayers":[
+    "Please wait until there are at least {0} players.",
+    "You cannot start the game until there are at least {0} players."
+  ],
+  "notplayingstart":[
+    "You are not playing, so you cannot start the game! Type `!join` to join the game."
+  ],
+  "notplayingleave":[
+    "You cannot leave a game you are not playing!"
+  ],
+  "alreadyin":[
+    "You are already playing!",
+    "You are already in!"
+  ],
+  "leavelobby":[
+    "**{0}** left the game. There are now **{1}** players in the lobby.",
+    "**{0}** walked out of the lobby. There are now **{1}** players in the lobby.",
+    "**{0}** was shot twice by a hunter, once in the head and once in the heart. Remaining players: **{1}**",
+    "**{0}** poked a bear in the eye with a stick and has paid the price. Remaining players: **{1}**",
+    "**{0}** was hit by a humongous yellow bullet from a giant yellow tank. The **{1}** remaining players cower in fear."
+  ],
+  "gamestart":[
+    "**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game.",
+    "**{0}** has started a game of Werewolf. Type `{p}start` to start the game. Type `{p}join` to join."
+  ],
+  "nokills":[
+    "The villagers discover the dead body of a beloved pet penguin, but lucklily no one was harmed.",
+    "The villagers discover the dead body of a beloved pet dog, but lucklily no one was harmed.",
+    "The villagers discover the dead body of a beloved pet cat, but lucklily no one was harmed.",
+    "Paw prints and tufts of fur are found circling the village, but everyone seems unharmed.",
+    "Some house doors have been opened.",
+    "A scent much like that of a wolf permeates the air.",
+    "Half-buried wolf droppings are found.",
+    "Traces of wolf fur are found.",
+    "The body of a young penguin pet is found.",
+    "Paw prints are found circling around the village.",
+    "A pool of blood and wolf paw prints are found.",
+    "The body of a slain cat is found."
+  ],
+  "lynched":[
+    "The villagers have agreed to lynch **{0}**, a **{1}**.",
+    "The villagers perform surgery to obtain the heart of **{0}**, now known to be a **{1}**. They put it in a plastic cup.",
+    "The villagers perform surgery to obtain the brains of **{0}**, now known to be a **{1}**. They seal it in a glass jar.",
+    "Reluctantly, the villagers lead **{0}** to the gallows, who is later found to be a **{1}**.",
+    "The villagers sacrifice **{0}** to the belunga god, who is satisfied with the **{1}** for now.",
+    "For SCIENCE, the villagers throw **{0}** into a volcano. They discover that the melting point of a **{1}** is less than that of lava.",
+    "The villagers force **{0}** to play Russian Roulette. The town square is stained with the remains of the **{1}**.",
+    "The villagers, after much debate, finally decide on lynching **{0}**, who turned out to be... a **{1}**.",
+    "After a prolonged struggle, **{0}** is forced to the gallows, and is discovered after death to be a **{1}**.",
+    "The villagers choose to hang **{0}**; however, the rope stretches and breaks, and the ensuing fall kills the **{1}**.",
+    "The villagers, heavy with the pain of death, reluctantly lynch **{0}**, a **{1}**.",
+    "Compliant with the will of the village, the gallows prove effective in killing **{0}**, a **{1}**.",
+    "Galvanized by fear, the mob puts **{0}** to death. After inspection, they find that they have killed a **{1}**.",
+    "In a fit of hysteria, the villagers lynch **{0}**, killing a **{1}**.",
+    "Believing their fellow neighbor and friend to be dangerous, the mob puts **{0}**, a **{1}**, to death.",
+    "Under a lot of noise, the pitchfork-bearing villagers lynch **{0}**, who turned out to be... a **{1}**.",
+    "Despite protests, the mob drags their victim to the hanging tree. **{0}** succumbs to the will of the horde, and is hanged. The villagers have killed a **{1}**.",
+    "Resigned to the inevitable, **{0}** is led to the gallows. Once the twitching stops, it is discovered that the village lynched a **{1}**.",
+    "Before the rope is pulled, **{0}**, a **{1}**, pulls the pin on a grenade. They hesitate, and it explodes, killing them.",
+    "Before the rope is pulled, **{0}**, a **{1}**, throws a grenade at the mob. The grenade explodes early.",
+    "Uttering a chilling war cry, the villagers drag **{0}** to the edge of a cliff and throw them off. The cliff face is now covered with the leftover remains of the late **{1}**.",
+    "The angry villagers grab **{0}** by the legs and arms, and throw them into a large fire. It seems that a **{1}**'s body doesn't burn that well, after all."
+  ],
+  "hastotem":[
+    "**{0}** is in possession of a mysterious totem..."
+  ],
+  "hastotem2":[
+    "**{0}** and **{1}** are in possession of a mysterious totem..."
+  ],
+  "hastotems":[
+    "**{0}**, and **{1}** are in possession of a mysterious totem..."
+  ],
+  "leavedeath":[
+    "**{0}** spontaneously combusted. The air smells of freshly burnt **{1}**.",
+    "While wearing a red triangular hat, **{0}**, a **{1}**, was shot dead by a hunter.",
+    "While wearing a yellow square hat, **{0}**, a **{1}**, was rammed by a tank.",
+    "While wearing a blue pentagonal hat, **{0}**, a **{1}**, was destroyed by a giant cannonball.",
+    "While wearing an oversized blue pentagonal hat, **{0}**, a **{1}**, was annihilated by a humongous mortar shell.",
+    "After jumping into a tank, **{0}** drowned. The fish consumed the dead **{1}**'s body.",
+    "**{0}** mysteriously disappeared in the woods. Nobody knows where the **{1}** went.",
+    "Standing under a tree, **{0}**, a **{1}**, is killed by a falling branch.",
+    "**{0}**, a **{1}**, is killed by lightning before the villagers' eyes. The air smells of burnt flesh.",
+    "Rampaging through the village, a bull gores **{0}**, a **{1}**.",
+    "**{0}**, a **{1}**, falls into a vat of molasses and drowns.",
+    "**{0}**, a **{1}**, suddenly falls over dead before the astonished villagers.",
+    "While wearing a fake pair of antlers, **{0}**, a **{1}**, is shot dead by a hunter.",
+    "Standing under a tree, **{0}**, a **{1}**, is killed by a falling branch.",
+    "Rampaging through the village, a bull gores **{0}**, a **{1}**.",
+    "**{0}**, a **{1}**, falls into a vat of molasses and drowns.",
+    "A pack of wild animals sets upon **{0}**. Soon the **{1}** is only a pile of bones and a lump in the beasts' stomachs.",
+    "**{0}**, a **{1}**, fell off the roof of their house and is now dead.",
+    "**{0}** is crushed to death by a falling tree. The villagers desperately try to save the **{1}**, but it is too late.",
+    "**{0}** suddenly bursts into flames and is now all but a memory. The survivors bury the **{1}**'s ashes.",
+    "**{0}** played Russian roulette and lost. The villagers bury the **{1}**'s remains.",
+    "**{0}**, a **{1}**, poked a bear in the eye with a stick and has paid the price.",
+    "**{0}** tried to smoke dynamite. The resulting explosion has left a crater in place of the **{1}**.",
+    "**{0}**, a **{1}**, went spelunking and never made it back."
+  ],
+  "firstjoin":[
+    "**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
+  ],
+  "cub_grow_up":[
+    "You have grown up into a wolf and vowed to take revenge for your dead parents!"
+  ],
+  "coin_toss":[
+    "**{0}** tosses a coin into the air..."
+  ],
+  "coin_land":[
+    "The coin lands on **{0}**."
+  ],
+  "traitor_turn":[
+    "HOOOOOOOOOWL. You have become... a wolf!\nIt is up to you to avenge your fallen leaders!"
+  ],
+  "traitor_turn_channel":[
+    "\u0002The villagers, during their celebrations, are frightened as they hear a loud howl. The wolves are not gone!\u0002"
+  ]
 }
