@@ -141,9 +141,19 @@
   ],
   "generic_success":[
     ":thumbsup:"
+		":thumbsup::skin-tone-1:",
+		":thumbsup::skin-tone-2:",
+		":thumbsup::skin-tone-3:",
+		":thumbsup::skin-tone-4:",
+		":thumbsup::skin-tone-5:"
   ],
   "generic_error":[
-    ":thumbsdown:"
+    ":thumbsdown:",
+		":thumbsdown::skin-tone-1:",
+		":thumbsdown::skin-tone-2:",
+		":thumbsdown::skin-tone-3:",
+		":thumbsdown::skin-tone-4:",
+		":thumbsdown::skin-tone-5:"
   ],
   "error_log": "An error has occurred and has been logged."
 }
