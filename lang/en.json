@@ -170,5 +170,7 @@
   "harlot_no_visit": [  
     "You have chosen to stay home for the night."
   ],
-  "error_log":"An error has occurred and has been logged."
+  "error_log": [
+    "An error has occurred and has been logged."
+  ]
 }
