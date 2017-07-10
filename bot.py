@@ -404,7 +404,7 @@ async def cmd_refresh(message, parameters):
         with open('lang/{}.json'.format(parameters), 'w', encoding='utf-8') as f:
             f.write(temp_str)
     lang = temp_lang
-    await reply(message, random.choice(lang['notplayingstart']))
+    await reply(message, random.choice(lang['refresh_success']).format(codeset))
 
 @cmd('start', [0, 1], "```\n{0}start takes no arguments\n\nVotes to start the game. A game needs at least " +\
                       str(MIN_PLAYERS) + " players to start.```")
