@@ -127,6 +127,9 @@
     "**{0}** tried to smoke dynamite. The resulting explosion has left a crater in place of the **{1}**.",
     "**{0}**, a **{1}**, went spelunking and never made it back."
   ],
+  "fleave_death": [
+
+  ],
   "firstjoin":[
     "**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
   ],
