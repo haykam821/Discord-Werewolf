@@ -15,7 +15,7 @@ IGNORE_THRESHOLD = 7
 NOTIFY_FILE = 'notify.txt'
 BACKUP_INTERVAL = 300
 MESSAGE_LANGUAGE = 'en'
-MESSAGE_DEBUG = false
+MESSAGE_DEBUG = False
 # enable if you're editing languages so the bot doesn't overwrite
 LOG_FILE = 'debug.txt'
 MIN_LOG_LEVEL = 1
