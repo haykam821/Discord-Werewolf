@@ -130,6 +130,9 @@
   "fleave_death": [
 
   ],
+  "fleave_lobby": [
+
+  ],
   "firstjoin":[
     "**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
   ],
