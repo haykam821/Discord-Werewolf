@@ -400,8 +400,9 @@ async def cmd_refresh(message, parameters):
     if not temp_lang:
         await reply(message, "Could not refresh language {} from Github.".format(parameters))
         return
-    with open('lang/{}.json'.format(parameters), 'w', encoding='utf-8') as f:
-        f.write(temp_str)
+    if not MESSAGE_DEBUG:
+        with open('lang/{}.json'.format(parameters), 'w', encoding='utf-8') as f:
+            f.write(temp_str)
     lang = temp_lang
     await reply(message, random.choice(lang['refresh_success']).format(codeset))
 
