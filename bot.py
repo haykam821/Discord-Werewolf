@@ -403,7 +403,7 @@ async def cmd_refresh(message, parameters):
     with open('lang/{}.json'.format(parameters), 'w', encoding='utf-8') as f:
         f.write(temp_str)
     lang = temp_lang
-    await reply(message, 'The messages with language code `' + codeset + '` have been refreshed from GitHub.')
+    await reply(message, random.choice(lang['refresh_success']).format(codeset))
 
 @cmd('start', [0, 1], "```\n{0}start takes no arguments\n\nVotes to start the game. A game needs at least " +\
                       str(MIN_PLAYERS) + " players to start.```")
@@ -1892,7 +1892,7 @@ async def parse_command(commandname, message, parameters):
                 print(session)
                 msg = '```py\n{}\n```\n**session:**```py\n{}\n```'.format(traceback.format_exc(), session)
                 await log(3, msg)
-                await client.send_message(message.channel, "An error has occurred and has been logged.")
+                await client.send_message(message.channel, random.choice(lang['error_log']))
         elif has_privileges(commands[commandname][1][0], message):
             if session[0] and message.author.id in [x for x in session[1] if session[1][x][0]]:
                 if commandname in COMMANDS_FOR_ROLE and (get_role(message.author.id, 'role') in COMMANDS_FOR_ROLE[commandname]\
