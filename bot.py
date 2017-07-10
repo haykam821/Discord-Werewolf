@@ -686,16 +686,19 @@ async def cmd_myrole(message, parameters):
 @cmd('stats', [0, 0], "```\n{0}stats takes no arguments\n\nLists current players in the lobby during the join phase, and lists game information in-game.```")
 async def cmd_stats(message, parameters):
     if session[0]:
-        reply_msg = "It is now **" + ("day" if session[2] else "night") + "time**. Using the **{}** gamemode.".format(
+        reply_msg = ''
+
+        phase_gamemode = "It is now **" + ("day" if session[2] else "night") + "time**. Using the **{}** gamemode.".format(
             'roles' if session[6].startswith('roles') else session[6])
-        reply_msg += "\n**" + str(len(session[1])) + "** players playing: **" + str(len([x for x in session[1] if session[1][x][0]])) + "** alive, "
-        reply_msg += "**" + str(len([x for x in session[1] if not session[1][x][0]])) + "** dead\n"
-        reply_msg += "```basic\nLiving players:\n" + "\n".join(get_name(x) + ' (' + x + ')' for x in sort_players(session[1]) if session[1][x][0]) + '\n'
-        reply_msg += "Dead players:\n" + "\n".join(get_name(x) + ' (' + x + ')' for x in sort_players(session[1]) if not session[1][x][0]) + '\n'
+
+        em = discord.Embed(title="Statistics", description=phase_gamemode + "\n**" + str(len(session[1])) + "** players playing: **" + str(len([x for x in session[1] if session[1][x][0]])) + "** alive, **" + str(len([x for x in session[1] if not session[1][x][0]])) + "** dead")
+
+        em.add_field(name='Living Players', value="```basic\n" + "\n".join(get_name(x) + ' (' + x + ')' for x in sort_players(session[1]) if session[1][x][0]) + '```', inline=True)
+        em.add_field(name='Dead Players', value="```basic\n" + "\n".join(get_name(x) + ' (' + x + ')' for x in sort_players(session[1]) if not session[1][x][0]) + '\n' + '```', inline=True)
 
         if session[6] in ('random',):
-            reply_msg += '\n!stats is disabled for the {} gamemode.```'.format(session[6])
-            await reply(message, reply_msg)
+            reply_msg += '\n!stats is disabled for the {} gamemode.'.format(session[6])
+            await reply(message, reply_msg, em)
             return
         orig_roles = dict(session[7])
         # make a copy
@@ -773,8 +776,8 @@ async def cmd_stats(message, parameters):
             else:
                 reply_msg += roles[role][1] + ": {}-{}".format(role_dict[role][0], role_dict[role][1])
             reply_msg += ", "
-        reply_msg = reply_msg.rstrip(", ") + "```"
-        await reply(message, reply_msg)
+        reply_msg = reply_msg.rstrip(", ")
+        await reply(message, reply_msg, em)
     else:
         players = ["{} ({})".format(get_name(x), x) for x in sort_players(session[1])]
         num_players = len(session[1])
