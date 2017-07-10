@@ -171,7 +171,7 @@
     "You have chosen to stay home for the night."
   ],
   "error_log": [
-    "An error has occurred and has been logged."
+    "An error occurred and has been logged."
   ],
   "refresh_success": [
     "The messages with language code `{0}` have been refreshed from GitHub.",
