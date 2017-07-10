@@ -178,7 +178,6 @@
     "The messages with language code `{0}` have been loaded from GitHub."
   ],
   "fjoin_self": [
-    "**{0}** couldn't join their owdn game.",
-    "test"
+    "**{0}** couldn't join their own game."
   ]
 }
