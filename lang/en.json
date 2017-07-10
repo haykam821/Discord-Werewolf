@@ -131,7 +131,7 @@
     "**{0}** was forcibly shoved into a fire. The air smells of freshly burnt **{1}**."
   ],
   "fleave_lobby": [
-
+    "**{0}** was forced to leave the game."
   ],
   "firstjoin":[
     "**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
