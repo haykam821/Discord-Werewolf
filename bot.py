@@ -340,10 +340,13 @@ async def cmd_fjoin(message, parameters):
         return
     join_msg = ""
     for member in sort_players(join_list):
-        session[1][member] = [True, '', '', [], []]
-        join_msg += "**" + get_name(member) + "** was forced to join the game.\n"
-        if client.get_server(WEREWOLF_SERVER).get_member(member):
-            await client.add_roles(client.get_server(WEREWOLF_SERVER).get_member(member), PLAYERS_ROLE)
+        if client.user.id == member:
+            join_msg += "**" + get_name(member) + "** couldn't join their own game.\n"
+        else:
+            session[1][member] = [True, '', '', [], []]
+            join_msg += "**" + get_name(member) + "** was forced to join the game.\n"
+            if client.get_server(WEREWOLF_SERVER).get_member(member):
+                await client.add_roles(client.get_server(WEREWOLF_SERVER).get_member(member), PLAYERS_ROLE)
     join_msg += "New player count: **{}**".format(len(session[1]))
     if len(session[1]) > 0:
         await client.change_presence(game=client.get_server(WEREWOLF_SERVER).me.game, status=discord.Status.idle)
