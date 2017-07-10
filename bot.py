@@ -394,7 +394,7 @@ async def cmd_refresh(message, parameters):
     global lang
     if parameters == '':
         parameters = MESSAGE_LANGUAGE
-    url = "https://raw.githubusercontent.com/belguawhale/Discord-Werewolf/master/lang/{}.json".format(parameters)
+    url = "https://raw.githubusercontent.com/haykam821/Discord-Werewolf-Old/patch-6/lang/{}.json".format(parameters)
     codeset = parameters
     temp_lang, temp_str = get_jsonparsed_data(url)
     if not temp_lang:
