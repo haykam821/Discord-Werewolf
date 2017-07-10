@@ -336,7 +336,7 @@ async def cmd_fjoin(message, parameters):
             if left.isdigit() and right.isdigit():
                 join_list += list(map(str, range(int(left), int(right) + 1)))
     if join_list == []:
-        await reply(message, "ERROR: no valid mentions found")
+        await reply(message, random.choice(lang['fjoin_no_mentions']))
         return
     join_msg = ""
     for member in sort_players(join_list):
