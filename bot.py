@@ -381,7 +381,7 @@ async def cmd_fleave(message, parameters):
             if session[0]:
                 leave_msg += random.choice(lang['']).format(get_name(member), get_role(member, 'death')) + "\n""**" +  + "** was forcibly shoved into a fire. The air smells of freshly burnt **" +  + "**.\n"
             else:
-                leave_msg += "**" + get_name(member) + "** was forced to leave the game.\n"
+                leave_msg += "**" + get_name(member) + "** was forced to leave the game." + "\n"
             await player_death(member, 'fleave')
     if not session[0]:
         leave_msg += "New player count: **{}**".format(len(session[1]))
