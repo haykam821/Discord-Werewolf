@@ -341,7 +341,7 @@ async def cmd_fjoin(message, parameters):
     join_msg = ""
     for member in sort_players(join_list):
         if client.user.id == member:
-            join_msg += "**" + get_name(member) + "** couldn't join their own game.\n"
+            join_msg += random.choice(lang['fjoin_self']).format(get_name(member)) + "\n"
         else:
             session[1][member] = [True, '', '', [], []]
             join_msg += "**" + get_name(member) + "** was forced to join the game.\n"
