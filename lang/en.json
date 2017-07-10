@@ -172,5 +172,9 @@
   ],
   "error_log": [
     "An error has occurred and has been logged."
+  ],
+  "refresh_success": [
+    "The messages with language code {0} have been refreshed from GitHub.",
+    "The messages with language code {0} have been loaded from GitHub."
   ]
 }
