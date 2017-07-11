@@ -2956,7 +2956,7 @@ async def game_loop(ses=None):
             if lynched_player == 'abstain':
                 for player in [x for x in totem_dict if session[1][x][0] and totem_dict[x] < 0]:
                     lynched_msg += "**{}** meekly votes to not lynch anyone today.\n".format(get_name(player))
-                lynched_msg += "The village has agreed to not lynch anyone today."
+                lynched_msg += random.choice(lang['abstain'])
                 await client.send_message(client.get_channel(GAME_CHANNEL), lynched_msg)
             else:
                 for player in [x for x in totem_dict if session[1][x][0] and totem_dict[x] > 0 and x != lynched_player]:
