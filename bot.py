@@ -2936,10 +2936,7 @@ async def game_loop(ses=None):
                 session[2] = False
             if (datetime.now() - session[3][1]).total_seconds() > DAY_WARNING and warn == False:
                 warn = True
-                await client.send_message(client.get_channel(GAME_CHANNEL), "**As the sun sinks inexorably toward the horizon, turning the lanky pine "
-                                          "trees into fire-edged silhouettes, the villagers are reminded that very little time remains for them to reach a "
-                                          "decision; if darkness falls before they have done so, the majority will win the vote. No one will be lynched if "
-                                          "there are no votes or an even split.**")
+                await client.send_message(client.get_channel(GAME_CHANNEL), random.choice(lang['day_timeout']))
             await asyncio.sleep(0.1)
         if not lynched_player and win_condition() == None and session[0]:
             vote_dict = get_votes(totem_dict)
