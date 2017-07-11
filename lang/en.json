@@ -78,7 +78,10 @@
     "Before the rope is pulled, **{0}**, a **{1}**, pulls the pin on a grenade. They hesitate, and it explodes, killing them.",
     "Before the rope is pulled, **{0}**, a **{1}**, throws a grenade at the mob. The grenade explodes early.",
     "Uttering a chilling war cry, the villagers drag **{0}** to the edge of a cliff and throw them off. The cliff face is now covered with the leftover remains of the late **{1}**.",
-    "The angry villagers grab **{0}** by the legs and arms, and throw them into a large fire. It seems that a **{1}**'s body doesn't burn that well, after all."
+    "The angry villagers grab **{0}** by the legs and arms, and throw them into a large fire. It seems that a **{1}**'s body doesn't burn that well, after all.",
+    "For SCIENCE, the villagers throw **{0}** into a large fire. It seems that a **{1}**'s body doesn't burn that well, after all.",
+    "The villagers ultimately decides on lynching **{0}**, a **{1}**.",
+    "The villagers watch as the dead body of their old **{1}** friend is hung from the gallows. They have lynched **{0}**."
   ],
   "hastotem":[
     "**{0}** is in possession of a mysterious totem..."
