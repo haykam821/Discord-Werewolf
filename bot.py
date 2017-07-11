@@ -2972,7 +2972,7 @@ async def game_loop(ses=None):
                     await client.send_message(client.get_channel(GAME_CHANNEL), lynched_msg)
                     await player_death(lynched_player, 'lynch')
                 if get_role(lynched_player, 'role') == 'fool' and 'revealing_totem' not in session[1][lynched_player][4]:
-                    win_msg = "The fool has been lynched, causing them to win!\n\n" + end_game_stats()
+                    win_msg = random.choice(lang['fool_win_reason']) + "\n\n" + end_game_stats()
                     await end_game(win_msg, [lynched_player])
                     return
         elif lynched_player == None and win_condition() == None and session[0]:
