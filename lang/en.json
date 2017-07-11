@@ -204,6 +204,9 @@
   "abstain": [
     "The village has agreed to not lynch anyone today."
   ],
+  "fool_win_reason": [
+    "The fool has been lynched, causing them to win!"
+  ],
   "harlot_already_visited": [
     "You are already spending the night with **{0}**."
   ],
