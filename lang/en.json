@@ -43,9 +43,9 @@
 		"**{0}** has started a game of Werewolf. Type `{p}start` to start the game. Type `{p}join` to join."
 	],
 	"nokills": [
-		"The villagers discover the dead body of a beloved pet penguin, but lucklily no one was harmed.",
-		"The villagers discover the dead body of a beloved pet dog, but lucklily no one was harmed.",
-		"The villagers discover the dead body of a beloved pet cat, but lucklily no one was harmed.",
+		"The villagers discover the dead body of a beloved pet penguin, but luckily no one was harmed.",
+		"The villagers discover the dead body of a beloved pet dog, but luckily no one was harmed.",
+		"The villagers discover the dead body of a beloved pet cat, but luckily no one was harmed.",
 		"Paw prints and tufts of fur are found circling the village, but everyone seems unharmed.",
 		"Some house doors have been opened.",
 	        "A scent much like that of a wolf permeates the air.",
