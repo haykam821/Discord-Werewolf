@@ -73,6 +73,34 @@
 	"hastotems": [
 		"**{0}**, and **{1}** are in possession of a mysterious totem..."
 	],
+	"error_shaman_power_day": [
+		"You may only give totems during the night."
+	],
+	"error_observe_power_day": [
+		"You may only observe during the night."
+	],
+	"error_detective_power_night": [
+		"You may only investigate during the day."
+	],
+	"error_power_already_used": [
+		"You have already used your power."
+	],
+	"error_no_gun": [
+		"You don't have a gun."
+	],
+	"error_no_bullets": [
+		"You have no more bullets."
+	],
+	"error_shooting_self": [
+		"You are holding it the wrong way.",
+		"Shooting yourself would be a waste."
+	],
+	"error_generic_waste": [
+		"That would be a waste."
+	],
+	"error_werecrow_observe_wolf": [
+		"Observing another wolf is a waste of time."
+	],
 	"leavedeath": [
 		"**{0}** spontaneously combusted. The air smells of freshly burnt **{1}**.",
 		"While wearing a red triangular hat, **{0}**, a **{1}**, was shot dead by a hunter.",
