@@ -840,7 +840,7 @@ async def cmd_see(message, parameters):
         await reply(message, "You may only see during the night.")
         return
     if session[1][message.author.id][2]:
-        await reply(message, "You have already used your power.")
+        await reply(message, random.choice(lang['error_power_already_used']))
     else:
         if parameters == "":
             await reply(message, roles[role][2])
@@ -1272,7 +1272,7 @@ async def cmd_give(message, parameters):
     if not session[0] or message.author.id not in session[1] or session[1][message.author.id][1] not in ['shaman', 'crazed shaman'] or not session[1][message.author.id][0]:
         return
     if session[2]:
-        await reply(message, "You may only give totems during the night.")
+        await reply(message, "")
         return
     if session[1][message.author.id][2] not in totems:
         await reply(message, "You have already given your totem to **" + get_name(session[1][message.author.id][2]) + "**.")
@@ -1720,7 +1720,7 @@ async def cmd_shoot(message, parameters):
         return
     if 'gunner' not in get_role(message.author.id, 'templates'):
         try:
-            await client.send_message(message.author, "You don't have a gun.")
+            await client.send_message(message.author, random.choice(lang['error_no_gun']))
         except discord.Forbidden:
             pass
         return
@@ -1734,7 +1734,7 @@ async def cmd_shoot(message, parameters):
     pm = False
     ded = None
     if session[1][message.author.id][4].count('bullet') < 1:
-        msg = "You have no more bullets."
+        msg = random.choice(lang['error_no_bullets'])
         pm = True
     else:
         if parameters == "":
@@ -1747,7 +1747,7 @@ async def cmd_shoot(message, parameters):
             if not target:
                 msg = 'Could not find player {}'.format(parameters)
             elif target == message.author.id:
-                msg = "You are holding it the wrong way."
+                msg = random.choice(lang['error_shooting_self'])
             elif not session[1][target][0]:
                 msg = "Player **{}** is dead!".format(get_name(target))
             else:
@@ -1819,7 +1819,7 @@ async def cmd_observe(message, parameters):
     if not session[0] or message.author.id not in session[1] or get_role(message.author.id, 'role') not in COMMANDS_FOR_ROLE['observe'] or not session[1][message.author.id][0]:
         return
     if session[2]:
-        await reply(message, "You may only observe during the night.")
+        await reply(message, random.choice(lang['error_observe_power_day']))
         return
     if get_role(message.author.id, 'role') == 'werecrow':
         if 'observe' in session[1][message.author.id][4]:
@@ -1831,9 +1831,9 @@ async def cmd_observe(message, parameters):
                 player = get_player(parameters)
                 if player:
                     if player == message.author.id:
-                        await reply(message, "That would be a waste.")
+                        await reply(message, random.choice(lang['error_generic_waste']))
                     elif player in [x for x in session[1] if roles[get_role(x, 'role')][0] == 'wolf' and get_role(x, 'role') != 'cultist']:
-                        await reply(message, "Observing another wolf is a waste of time.")
+                        await reply(message, random.choice(lang['error_werecrow_observe_wolf']))
                     elif not session[1][player][0]:
                         await reply(message, "Player **" + get_name(player) + "** is dead!")
                     else:
@@ -1862,7 +1862,7 @@ async def cmd_observe(message, parameters):
                     await reply(message, "Could not find player " + parameters)
     elif get_role(message.author.id, 'role') == 'sorcerer':
         if session[1][message.author.id][2]:
-            await reply(message, "You have already used your power.")
+            await reply(message, random.choice(lang['error_power_already_used']))
         elif parameters == "":
             await reply(message, roles[session[1][message.author.id][1]][2])
         else:
@@ -1871,7 +1871,7 @@ async def cmd_observe(message, parameters):
                 if player == message.author.id:
                     await reply(message, "Using your power on yourself would be a waste.")
                 elif player in [x for x in session[1] if roles[get_role(x, 'role')][0] == 'wolf' and get_role(x, 'role') != 'cultist']:
-                    await reply(message, "Observing another wolf is a waste of time.")
+                    await reply(message, random.choice(lang['error_werecrow_observe_wolf']))
                 elif not session[1][player][0]:
                     await reply(message, "Player **" + get_name(player) + "** is dead!")
                 else:
@@ -1894,7 +1894,7 @@ async def cmd_id(message, parameters):
     if not session[0] or message.author.id not in session[1] or get_role(message.author.id, 'role') not in COMMANDS_FOR_ROLE['id'] or not session[1][message.author.id][0]:
         return
     if not session[2]:
-        await reply(message, "You may only investigate during the day.")
+        await reply(message, random.choice(lang['error_detective_power_night']))
         return
     if 'investigate' in session[1][message.author.id][4]:
         await reply(message, "You have already investigated someone.")
