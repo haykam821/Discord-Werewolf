@@ -82,13 +82,13 @@
     "The villagers ultimately decides on lynching **{0}**, a **{1}**.",
     "The villagers watch as the dead body of their old **{1}** friend is hung from the gallows. They have lynched **{0}**."
   ],
-  "hastotem":[
+  "has_totem_one":[
     "**{0}** is in possession of a mysterious totem..."
   ],
-  "hastotem2":[
+  "has_totem_two":[
     "**{0}** and **{1}** are in possession of a mysterious totem..."
   ],
-  "hastotems":[
+  "has_totem_many":[
     "**{0}**, and **{1}** are in possession of a mysterious totem..."
   ],
   "death_totem":[

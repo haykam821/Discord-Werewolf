@@ -3135,11 +3135,11 @@ async def game_loop(ses=None):
                 if len(totem_holders) == 0:
                     pass
                 elif len(totem_holders) == 1:
-                    await send_lobby(random.choice(lang['hastotem']).format(get_name(totem_holders[0])))
+                    await send_lobby(random.choice(lang['has_totem_one']).format(get_name(totem_holders[0])))
                 elif len(totem_holders) == 2:
-                    await send_lobby(random.choice(lang['hastotem2']).format(get_name(totem_holders[0]), get_name(totem_holders[1])))
+                    await send_lobby(random.choice(lang['has_totem_two']).format(get_name(totem_holders[0]), get_name(totem_holders[1])))
                 else:
-                    await send_lobby(random.choice(lang['hastotems']).format('**, **'.join([get_name(x) for x in totem_holders[:-1]]), get_name(totem_holders[-1])))
+                    await send_lobby(random.choice(lang['has_totem_many']).format('**, **'.join([get_name(x) for x in totem_holders[:-1]]), get_name(totem_holders[-1])))
 
             for player in killed_temp:
                 lovers = []
