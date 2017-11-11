@@ -233,6 +233,9 @@
   "coin_land":[
     "The coin lands on **{0}**."
   ],
+  "cat_land":[
+    "The cat landed on **its feet**!"
+  ],
   "traitor_turn":[
     "HOOOOOOOOOWL. You have become... a wolf!\nIt is up to you to avenge your fallen leaders!"
   ],
