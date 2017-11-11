@@ -131,7 +131,8 @@
 		"You don't have a gun."
 	],
 	"error_no_bullets": [
-		"You have no more bullets."
+		"You have no more bullets.",
+    "You've run out of bullets."
 	],
 	"error_shooting_self": [
 		"You are holding it the wrong way.",
@@ -141,7 +142,8 @@
 		"That would be a waste."
 	],
 	"error_werecrow_observe_wolf": [
-		"Observing another wolf is a waste of time."
+		"Observing another wolf is a waste of time.",
+    "Spying on your ally would be a waste."
 	],
   "leavedeath":[
     "**{0}** spontaneously combusted. The air smells of freshly burnt **{1}**.",
@@ -214,16 +216,19 @@
     "**{0}** was forcibly shoved into a fire. The air smells of freshly burnt **{1}**."
   ],
   "fleave_lobby":[
-    "**{0}** was forced to leave the game."
+    "**{0}** was forced to leave the game.",
+    "**{0}** was forced to leave the lobby.",
   ],
   "firstjoin":[
     "**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
   ],
   "cub_grow_up":[
-    "You have grown up into a wolf and vowed to take revenge for your dead parents!"
+    "You have grown up into a wolf and vowed to take revenge for your dead parents!",
+    "You have matured into a wolf and vowed to take revenge for your dead parents!"
   ],
   "coin_toss":[
-    "**{0}** tosses a coin into the air..."
+    "**{0}** tosses a coin into the air...",
+    "**{0}**'s coin flips in the air...",
   ],
   "coin_land":[
     "The coin lands on **{0}**."
@@ -266,7 +271,8 @@
     "You are spending the night with **{0}**. Have a good time!"
   ],
   "harlot_no_visit":[
-    "You have chosen to stay home for the night."
+    "You have chosen to stay home for the night.",
+    "You have decided to stay at your house tonight."
   ],
   "error_log":[
     "An error occurred and has been logged."
@@ -276,7 +282,7 @@
     "The messages with language code `{0}` have been loaded from GitHub."
   ],
   "fjoin_no_mentions":[
-    "ERROR: no valid mentions found"
+    "No valid mentions were found."
   ],
   "fjoin_self":[
     "**{0}** couldn't join their own game."
