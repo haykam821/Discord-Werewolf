@@ -250,7 +250,7 @@
   ],
   "fleave_lobby":[
     "**{0}** was forced to leave the game.",
-    "**{0}** was forced to leave the lobby.",
+    "**{0}** was forced to leave the lobby."
   ],
   "firstjoin":[
     "**{0}** has started a game of Werewolf. Type `{p}join` to join. Type `{p}start` to start the game."
@@ -261,7 +261,7 @@
   ],
   "coin_toss":[
     "**{0}** tosses a coin into the air...",
-    "**{0}**'s coin flips in the air...",
+    "**{0}**'s coin flips in the air..."
   ],
   "coin_land":[
     "The coin lands on **{0}**."
