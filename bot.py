@@ -1446,7 +1446,7 @@ async def cmd_visit(message, parameters):
     if not session[0] or message.author.id not in session[1] or session[1][message.author.id][1] != 'harlot' or not session[1][message.author.id][0]:
         return
     if session[2]:
-        await reply(message, "You may only visit during the night.")
+        await reply(message, random.choice(lang["error_harlot_power_day"]))
         return
     if session[1][message.author.id][2]:
         await reply(message, "You are already spending the night with **{}**.".format(get_name(session[1][message.author.id][2])))
@@ -1457,17 +1457,17 @@ async def cmd_visit(message, parameters):
             player = get_player(parameters)
             if player:
                 if player == message.author.id:
-                    await reply(message, "You have chosen to stay home tonight.")
+                    await reply(message, random.choice(lang["harlot_no_visit"]))
                     session[1][message.author.id][2] = message.author.id
                     await log(1, "{0} ({1}) STAY HOME".format(get_name(message.author.id), message.author.id))
                 elif not session[1][player][0]:
                     await reply(message, "Player **" + get_name(player) + "** is dead!")
                 else:
-                    await reply(message, "You are spending the night with **{}**. Have a good time!".format(get_name(player)))
+                    await reply(message, random.choice(lang["harlot_visit_notification"]).format(get_name(player)))
                     session[1][message.author.id][2] = player
                     member = client.get_server(WEREWOLF_SERVER).get_member(player)
                     try:
-                        await client.send_message(member, "You are spending the night with **{}**. Have a good time!".format(get_name(message.author.id)))
+                        await client.send_message(member, random.choice(lang["harlot_visit_notification"]).format(get_name(message.author.id)))
                     except:
                         pass
                     await log(1, "{0} ({1}) VISIT {2} ({3})".format(get_name(message.author.id), message.author.id, get_name(player), player))
@@ -1720,13 +1720,13 @@ async def cmd_shoot(message, parameters):
         return
     if 'gunner' not in get_role(message.author.id, 'templates'):
         try:
-            await client.send_message(message.author, "You don't have a gun.")
+            await client.send_message(message.author, random.choice(lang["error_no_gun"]))
         except discord.Forbidden:
             pass
         return
     if not session[2]:
         try:
-            await client.send_message(message.author, "You may only shoot players during the day.")
+            await client.send_message(message.author, random.choice(lang["error_gunner_power_night"]))
         except:
             pass
         return
@@ -1734,7 +1734,7 @@ async def cmd_shoot(message, parameters):
     pm = False
     ded = None
     if session[1][message.author.id][4].count('bullet') < 1:
-        msg = "You have no more bullets."
+        msg = random.choice(lang["error_no_bullets"])
         pm = True
     else:
         if parameters == "":
@@ -1747,7 +1747,7 @@ async def cmd_shoot(message, parameters):
             if not target:
                 msg = 'Could not find player {}'.format(parameters)
             elif target == message.author.id:
-                msg = "You are holding it the wrong way."
+                msg = random.choice(lang["error_shooting_self"])
             elif not session[1][target][0]:
                 msg = "Player **{}** is dead!".format(get_name(target))
             else:
@@ -3184,9 +3184,7 @@ async def game_loop(ses=None):
                         try:
                             member = client.get_server(WEREWOLF_SERVER).get_member(player)
                             if member:
-                                await client.send_message(member, "Your totem emits a brilliant flash of light. "
-                                                                "It seems like you cannot see anything! Perhaps "
-                                                                "you should just rest during the day...")
+                                await client.send_message(member, random.choice(lang["blinding_totem_activate"]))
                         except discord.Forbidden:
                             pass
 
@@ -3212,10 +3210,7 @@ async def game_loop(ses=None):
                     session[2] = False
                 if (datetime.now() - session[3][1]).total_seconds() > DAY_WARNING and warn == False:
                     warn = True
-                    await send_lobby("**As the sun sinks inexorably toward the horizon, turning the lanky pine "
-                                            "trees into fire-edged silhouettes, the villagers are reminded that very little time remains for them to reach a "
-                                            "decision; if darkness falls before they have done so, the majority will win the vote. No one will be lynched if "
-                                            "there are no votes or an even split.**")
+                    await send_lobby(random.choice(lang["day_timeout"]))
                 await asyncio.sleep(0.1)
             if not lynched_player and win_condition() == None and session[0]:
                 vote_dict = get_votes(totem_dict)
@@ -3242,8 +3237,7 @@ async def game_loop(ses=None):
                         lynched_msg += "**{}** impatiently votes to lynch **{}**.\n".format(get_name(player), get_name(lynched_player))
                     lynched_msg += '\n'
                     if 'revealing_totem' in session[1][lynched_player][4]:
-                        lynched_msg += 'As the villagers prepare to lynch **{0}**, their totem emits a brilliant flash of light! When the villagers are able to see again, '
-                        lynched_msg += 'they discover that {0} has escaped! The left-behind totem seems to have taken on the shape of a **{1}**.'
+                        lynched_msg += random.choice(lang["revealing_totem_activate"])
                         lynched_msg = lynched_msg.format(get_name(lynched_player), get_role(lynched_player, 'role'))
                         await send_lobby(lynched_msg)
                     else:
@@ -3251,7 +3245,7 @@ async def game_loop(ses=None):
                         await send_lobby(lynched_msg)
                         await player_death(lynched_player, 'lynch')
                     if get_role(lynched_player, 'role') == 'fool' and 'revealing_totem' not in session[1][lynched_player][4]:
-                        win_msg = "The fool has been lynched, causing them to win!\n\n" + end_game_stats()
+                        win_msg = random.choice(lang["fool_win_reason"]) + "\n\n" + end_game_stats()
                         o = []
                         for n in session[1][lynched_player][4]:
                             if n.startswith('lover:'):
@@ -3294,7 +3288,7 @@ async def start_votes(player):
     else:
         for player in session[1]:
             session[1][player][1] = ''
-        await send_lobby("Not enough votes to start, resetting start votes.")
+        await send_lobby(random.choice(lang["reset_start_votes"]))
 
 async def rate_limit(message):
     if not (message.channel.is_private or message.content.startswith(BOT_PREFIX)) or message.author.id in ADMINS or message.author.id == OWNER_ID:

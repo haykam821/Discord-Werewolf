@@ -100,6 +100,10 @@
   "revealing_totem":[
     "If the player who is given this totem is lynched, their role is revealed to everyone instead of them dying."
   ],
+  "revealing_totem_activate": [
+    "As the villagers prepare to lynch **{0}**, their totem emits a brilliant flash of light! When the villagers are able to see again, they discover that {0} has escaped! The left-behind totem seems to have taken on the shape of a **{1}**.",
+    "As the villagers tie **{0}**'s noose, their totem blinds everyone's eyes! When the villagers regain the ability to see, they discover that {0} has escaped! The totem they dropped has the appearance of a **{1}**."
+  ],
   "impatience_totem":[
     "The player who is given this totem is counted as voting for everyone except themselves, even if they do not !vote."
   ],
@@ -108,6 +112,24 @@
   ],
   "influence_totem":[
     "Votes by the player who is given this totem count twice."
+  ],
+  "cursed_totem":[
+    "The player who is given this totem will gain the cursed template if they do not have it."
+  ],
+  "lycanthropy_totem":[
+    "If the player who is given this totem is targeted by wolves the following night, they turn into a wolf instead of dying."
+  ],
+  "retribution_totem":[
+    "If the player who is given this totem is targeted by wolves during the night, they kill a random wolf in turn."
+  ],
+  "blinding_totem":[
+    "The player who is given this totem will be injured and unable to vote the following day."
+  ],
+  "blinding_totem_active":[
+    "Your totem emits a brilliant flash of light. It seems like you cannot see anything! Perhaps you should just rest during the day..."
+  ],
+  "deceit_totem":[
+    "If the player who is given this totem is seen by the seer/oracle the following night, the vision will return the opposite of what they are. If a seer/oracle is given this totem, all of their visions will return the opposite."
   ],
   "random_totem_target":[
     "Because you forgot to give your totem out at night, your **{0}** was randomly given to **{1}**."
@@ -124,9 +146,15 @@
 	"error_detective_power_night": [
 		"You may only investigate during the day."
 	],
+  "error_harlot_power_day": [
+    "You may only visit during the night."
+  ],
 	"error_power_already_used": [
 		"You have already used your power."
 	],
+  "error_gunner_power_night": [
+    "You may only shoot players during the day."
+  ],
 	"error_no_gun": [
 		"You don't have a gun."
 	],
@@ -136,14 +164,19 @@
 	],
 	"error_shooting_self": [
 		"You are holding it the wrong way.",
-		"Shooting yourself would be a waste."
+		"Shooting yourself would be a waste.",
+		"Shooting yourself is a waste of time."
 	],
 	"error_generic_waste": [
 		"That would be a waste."
 	],
 	"error_werecrow_observe_wolf": [
+		"Observing another wolf would be a waste.",
 		"Observing another wolf is a waste of time.",
-    "Spying on your ally would be a waste."
+    "Spying on your ally would be a waste.",
+    "Spying on your ally is a waste of time.",
+    "Watching your accomplice would be a waste.",
+    "Watching your accomplice is a waste of time."
 	],
   "leavedeath":[
     "**{0}** spontaneously combusted. The air smells of freshly burnt **{1}**.",
@@ -270,7 +303,7 @@
   "harlot_already_visited":[
     "You are already spending the night with **{0}**."
   ],
-  "harlot_success":[
+  "harlot_visit_notification":[
     "You are spending the night with **{0}**. Have a good time!"
   ],
   "harlot_no_visit":[
@@ -279,6 +312,9 @@
   ],
   "error_log":[
     "An error occurred and has been logged."
+  ],
+  "reset_start_votes":[
+    "There aren't enough votes to start; resetting start votes."
   ],
   "refresh_success":[
     "The messages with language code `{0}` have been refreshed from GitHub.",
