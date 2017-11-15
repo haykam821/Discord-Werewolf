@@ -1272,7 +1272,7 @@ async def cmd_give(message, parameters):
     if not session[0] or message.author.id not in session[1] or session[1][message.author.id][1] not in ['shaman', 'crazed shaman'] or not session[1][message.author.id][0]:
         return
     if session[2]:
-        await reply(message, "You may only give totems during the night.")
+        await reply(message, random.choice(lang["error_shaman_power_day"]))
         return
     if session[1][message.author.id][2] not in totems:
         await reply(message, "You have already given your totem to **" + get_name(session[1][message.author.id][2]) + "**.")
