@@ -197,7 +197,7 @@ async def cmd_exec(message, parameters):
         sys.stdout = old_stdout
     output = str(redirected_output.getvalue())
     if output == '':
-        output = ":thumbsup:"
+        output = random.choice(lang["generic_success"])
     await client.send_message(message.channel, output)
 
 @cmd('async', [2, 2], "```\n{0}async <code>\n\nExecutes <code> as a coroutine.```")
@@ -534,26 +534,26 @@ async def cmd_op(message, parameters):
     await log(2, "{0} ({1}) OP {2}".format(message.author.name, message.author.id, parameters))
     if parameters == "":
         await client.add_roles(client.get_server(WEREWOLF_SERVER).get_member(message.author.id), ADMINS_ROLE)
-        await reply(message, ":thumbsup:")
+        await reply(message, random.choice(lang["generic_success"]))
     else:
         member = client.get_server(WEREWOLF_SERVER).get_member(parameters.strip("<!@>"))
         if member:
             if member.id in ADMINS:
                 await client.add_roles(member, ADMINS_ROLE)
-                await reply(message, ":thumbsup:")
+                await reply(message, random.choice(lang["generic_success"]))
 
 @cmd('deop', [1, 1], "```\n{0}deop takes no arguments\n\nDeops yourself so you can play with the players ;)```")
 async def cmd_deop(message, parameters):
     await log(2, "{0} ({1}) DEOP {2}".format(message.author.name, message.author.id, parameters))
     if parameters == "":
         await client.remove_roles(client.get_server(WEREWOLF_SERVER).get_member(message.author.id), ADMINS_ROLE)
-        await reply(message, ":thumbsup:")
+        await reply(message, random.choice(lang["generic_success"]))
     else:
         member = client.get_server(WEREWOLF_SERVER).get_member(parameters.strip("<!@>"))
         if member:
             if member.id in ADMINS:
                 await client.remove_roles(member, ADMINS_ROLE)
-                await reply(message, ":thumbsup:")
+                await reply(message, random.choice(lang["generic_success"]))
 
 @cmd('role', [0, 0], "```\n{0}role [<role | number of players | gamemode>] [<number of players>]\n\nIf a <role> is given, "
                      "displays a description of <role>. If a <number of players> is given, displays the quantity of each "
@@ -1163,6 +1163,7 @@ async def cmd_abstain(message, parameters):
 async def cmd_coin(message, parameters):
     value = random.randint(1,100)
     reply_msg = ''
+    msg = ''
     if value == 1:
         reply_msg = 'its side'
     elif value == 100:
@@ -1171,7 +1172,11 @@ async def cmd_coin(message, parameters):
         reply_msg = 'heads'
     else:
         reply_msg = 'tails'
-    await reply(message, 'The coin landed on **' + reply_msg + '**!')
+
+    msg += random.choice(lang["coin_flip"]).format(message.author.name)
+    msg += '\n'
+    msg += random.choice(lang["coin_land"]).format(reply_msg)
+    await reply(message, msg)
 
 @cmd('admins', [0, 0], "```\n{0}admins takes no arguments\n\nLists online/idle admins if used in pm, and **alerts** online/idle admins if used in channel (**USE ONLY WHEN NEEDED**).```")
 async def cmd_admins(message, parameters):
@@ -1181,14 +1186,14 @@ async def cmd_admins(message, parameters):
 async def cmd_fday(message, parameters):
     if session[0] and not session[2]:
         session[2] = True
-        await reply(message, ":thumbsup:")
+        await reply(message, random.choice(lang["generic_success"]))
         await log(2, "{0} ({1}) FDAY".format(message.author.name, message.author.id))
 
 @cmd('fnight', [1, 2], "```\n{0}fnight takes no arguments\n\nForces day to end.```")
 async def cmd_fnight(message, parameters):
     if session[0] and session[2]:
         session[2] = False
-        await reply(message, ":thumbsup:")
+        await reply(message, random.choice(lang["generic_success"]))
         await log(2, "{0} ({1}) FNIGHT".format(message.author.name, message.author.id))
 
 @cmd('frole', [1, 2], "```\n{0}frole <player> <role>\n\nSets <player>'s role to <role>.```")
@@ -1275,7 +1280,7 @@ async def cmd_give(message, parameters):
         await reply(message, random.choice(lang["error_shaman_power_day"]))
         return
     if session[1][message.author.id][2] not in totems:
-        await reply(message, "You have already given your totem to **" + get_name(session[1][message.author.id][2]) + "**.")
+        await reply(message, random.choice("error_shaman_already_given").format(get_name(session[1][message.author.id][2])))
     else:
         if parameters == "":
             await reply(message, roles[session[1][message.author.id][1]][2])
@@ -1449,7 +1454,7 @@ async def cmd_visit(message, parameters):
         await reply(message, random.choice(lang["error_harlot_power_day"]))
         return
     if session[1][message.author.id][2]:
-        await reply(message, "You are already spending the night with **{}**.".format(get_name(session[1][message.author.id][2])))
+        await reply(message, random.choice(lang["error_harlot_already_visiting"]).format(get_name(session[1][message.author.id][2])))
     else:
         if parameters == "":
             await reply(message, roles[session[1][message.author.id][1]][2])
@@ -1767,23 +1772,22 @@ async def cmd_shoot(message, parameters):
                     outcome = random.choice(['miss'] * GUNNER_MISS + ['suicide'] * GUNNER_SUICIDE \
                                              + ['killvictim'] * GUNNER_HEADSHOT + ['injure'] * GUNNER_INJURE)
                 if outcome in ['injure', 'killvictim', 'killwolf']:
-                    msg = "**{}** shoots **{}** with a bullet!\n\n".format(get_name(message.author.id), get_name(target))
+                    msg = random.choice(lang["shoot"]).format(get_name(message.author.id), get_name(target)) + "\n\n"
                 if outcome == 'miss':
-                    msg += "**{}** is a lousy shooter and missed!".format(get_name(message.author.id))
+                    msg += random.choice(lang["shoot_miss"]).format(get_name(message.author.id))
                 elif outcome == 'killwolf':
-                    msg += "**{}** is a **{}** and is dying from the silver bullet!".format(get_name(target),
+                    msg += random.choice(lang["shoot_wolf"]).format(get_name(target),
                             get_role(target, 'death'))
                     ded = target
                 elif outcome == 'suicide':
-                    msg += "Oh no! **{}**'s gun was poorly maintained and has exploded! ".format(get_name(message.author.id))
-                    msg += "The village mourns a **gunner-{}**.".format(get_role(message.author.id, 'death'))
+                    msg += random.choice(lang["shoot_explode"]).format(get_name(message.author.id), get_role(message.author.id, 'death'))
                     ded = message.author.id
                 elif outcome == 'killvictim':
-                    msg += "**{}** is not a wolf but was fatally injured. The village has sacrificed a **{}**.".format(
+                    msg += random.choice(lang["shoot_victim"]).format(
                             get_name(target), get_role(target, 'death'))
                     ded = target
                 elif outcome == 'injure':
-                    msg += "**{}** is a villager and was injured. Luckily the injury is minor and will heal after a day of rest.".format(
+                    msg += random.choice(lang["shoot_injure"]).format(
                             get_name(target))
                     session[1][target][4].append('injured')
                 else:
@@ -1831,9 +1835,9 @@ async def cmd_observe(message, parameters):
                 player = get_player(parameters)
                 if player:
                     if player == message.author.id:
-                        await reply(message, "That would be a waste.")
+                        await reply(message, random.choice(lang["error_generic_waste"]))
                     elif player in [x for x in session[1] if roles[get_role(x, 'role')][0] == 'wolf' and get_role(x, 'role') != 'cultist']:
-                        await reply(message, "Observing another wolf is a waste of time.")
+                        await reply(message, random.choice(lang["error_werecrow_observe_wolf"]))
                     elif not session[1][player][0]:
                         await reply(message, "Player **" + get_name(player) + "** is dead!")
                     else:
@@ -1854,7 +1858,7 @@ async def cmd_observe(message, parameters):
                         else:
                                 msg = "sleeping all night long"
                         try:
-                            await client.send_message(message.author, "As the sun rises, you conclude that **{}** was {}, and you fly back to your house.".format(
+                            await client.send_message(message.author, random.choice(lang["werecrow_observe_results"]).format(
                                 get_name(player), msg))
                         except discord.Forbidden:
                             pass
@@ -1937,7 +1941,7 @@ async def cmd_frevive(message, parameters):
                 await reply(message, "Player **{}** is already alive!".format(player))
             else:
                 session[1][player][0] = True
-                await reply(message, ":thumbsup:")
+                await reply(message, random.choice(lang["generic_success"]))
         else:
             await reply(message, "Could not find player {}".format(parameters))
     await log(2, "{} ({}) FREVIVE {}".format(message.author.name, message.author.id, parameters))

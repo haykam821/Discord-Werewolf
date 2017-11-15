@@ -178,6 +178,9 @@
     "Watching your accomplice would be a waste.",
     "Watching your accomplice is a waste of time."
 	],
+  "werecrow_observe_results": [
+    "As the sun rises, you conclude that **{0}** was {1}, and you fly back to your house."
+  ],
   "leavedeath":[
     "**{0}** spontaneously combusted. The air smells of freshly burnt **{1}**.",
     "While wearing a red triangular hat, **{0}**, a **{1}**, was shot dead by a hunter.",
@@ -270,7 +273,7 @@
     "The cat landed on **its feet**!"
   ],
   "traitor_turn":[
-    "HOOOOOOOOOWL. You have become... a wolf!\nIt is up to you to avenge your fallen leaders!"
+    "*HOOOOOWL.* You have become... a wolf!\nIt is up to you to avenge your fallen leaders!"
   ],
   "traitor_turn_channel":[
     "**The villagers, during their celebrations, are frightened as they hear a loud howl. The wolves are not gone!**"
@@ -300,7 +303,25 @@
   "fool_win_reason":[
     "The fool has been lynched, causing them to win!"
   ],
-  "harlot_already_visited":[
+  "shoot": [
+    "**{0}** shoots **{1}** with a bullet!"
+  ],
+  "shoot_miss": [
+    "**{0}** is a lousy shooter and missed!"
+  ],
+  "shoot_wolf": [
+    "**{0}** is a **{1}** and is dying from the silver bullet!"
+  ],
+  "shoot_explode": [
+    "Oh no! **{0}**'s gun was poorly maintained and has exploded! The village mourns a **gunner-{1}**."
+  ],
+  "shoot_victim": [
+    "**{0}** is not a wolf but was fatally injured. The village has sacrificed a **{1}**."
+  ],
+  "shoot_injure": [
+    "**{0}** is a villager and was injured. Luckily the injury is minor and will heal after a day of rest."
+  ],
+  "error_harlot_already_visiting":[
     "You are already spending the night with **{0}**."
   ],
   "harlot_visit_notification":[
@@ -309,6 +330,9 @@
   "harlot_no_visit":[
     "You have chosen to stay home for the night.",
     "You have decided to stay at your house tonight."
+  ],
+  "error_shaman_already_given": [
+    "You have already given your totem to **{0}**."
   ],
   "error_log":[
     "An error occurred and has been logged."
